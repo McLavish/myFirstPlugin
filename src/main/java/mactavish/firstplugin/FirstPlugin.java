@@ -1,13 +1,13 @@
-package mactavish.myFirstPlugin;
+package mactavish.firstplugin;
 
-import mactavish.myFirstPlugin.commands.CommandItem;
-import mactavish.myFirstPlugin.events.BreakBlock;
-import mactavish.myFirstPlugin.events.EntityDeath;
-import mactavish.myFirstPlugin.events.EntityTarget;
-import mactavish.myFirstPlugin.events.PlayerInteract;
+import mactavish.firstplugin.commands.CommandItem;
+import mactavish.firstplugin.events.BreakBlock;
+import mactavish.firstplugin.events.EntityDeath;
+import mactavish.firstplugin.events.EntityTarget;
+import mactavish.firstplugin.events.PlayerInteract;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class myFirstPlugin extends JavaPlugin {
+public class FirstPlugin extends JavaPlugin {
 
 
     @Override

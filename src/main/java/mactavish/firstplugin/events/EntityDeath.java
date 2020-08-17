@@ -1,4 +1,4 @@
-package mactavish.myFirstPlugin.events;
+package mactavish.firstplugin.events;
 
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;

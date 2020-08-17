@@ -1,6 +1,6 @@
-package mactavish.myFirstPlugin.events;
+package mactavish.firstplugin.events;
 
-import mactavish.myFirstPlugin.utils.Treefeller;
+import mactavish.firstplugin.utils.Treefeller;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;

@@ -1,4 +1,4 @@
-package mactavish.myFirstPlugin.utils;
+package mactavish.firstplugin.utils;
 
 import org.bukkit.entity.Creature;
 import org.bukkit.entity.Player;
@@ -8,19 +8,19 @@ import java.util.HashMap;
 //Singleton
 //https://bukkit.org/threads/team-systems.411790/
 public class TeamsManager {
-    private static TeamsManager instance = new TeamsManager();
+    private static final TeamsManager instance = new TeamsManager();
+    private final HashMap<String, Team> teams = new HashMap<>();
+    private final HashMap<Player, Team> players = new HashMap<>();
+    private final HashMap<Creature, Team> mobs = new HashMap<>();
 
-    private TeamsManager() {}
+    private TeamsManager() {
+    }
 
-    private HashMap<String, Team> teams = new HashMap<>();
-    private HashMap<Player, Team> players = new HashMap<>();
-    private HashMap<Creature, Team> mobs = new HashMap<>();
-
-    public static TeamsManager getInstance(){
+    public static TeamsManager getInstance() {
         return instance;
     }
 
-    public boolean createTeam(Player founder, String teamName){
+    public boolean createTeam(Player founder, String teamName) {
         if (isInTeam(founder) || teams.containsKey(teamName))
             return false;
 

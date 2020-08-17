@@ -1,6 +1,8 @@
-package mactavish.myFirstPlugin.utils;
+package mactavish.firstplugin.utils;
+
 import org.bukkit.Material;
 import org.bukkit.block.Block;
+
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 

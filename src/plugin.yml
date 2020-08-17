@@ -1,9 +1,0 @@
-name: myFirstPlugin
-version: 1
-author: MacTavish
-main: mactavish.myFirstPlugin.myFirstPlugin
-api-version: 1.16
-commands:
-  myteams:
-    description: asdasdsa
-    usage: /myteams <command> <teamName>

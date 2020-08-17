@@ -1,6 +1,6 @@
-package mactavish.myFirstPlugin.commands;
+package mactavish.firstplugin.commands;
 
-import mactavish.myFirstPlugin.utils.TeamsManager;
+import mactavish.firstplugin.utils.TeamsManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

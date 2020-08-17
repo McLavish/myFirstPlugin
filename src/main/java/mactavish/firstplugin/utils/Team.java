@@ -1,20 +1,20 @@
-package mactavish.myFirstPlugin.utils;
+package mactavish.firstplugin.utils;
 
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 
 public class Team {
-    private ArrayList<Player> members;
-    private String name;
+    private final ArrayList<Player> members;
+    private final String name;
 
-    public Team (Player founder, String name){
+    public Team(Player founder, String name) {
         this.members = new ArrayList<>();
         this.name = name;
         members.add(founder);
     }
 
-    public void playerJoin (Player sender){
+    public void playerJoin(Player sender) {
         members.add(sender);
     }
 

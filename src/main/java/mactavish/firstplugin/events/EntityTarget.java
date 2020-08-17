@@ -1,7 +1,7 @@
-package mactavish.myFirstPlugin.events;
+package mactavish.firstplugin.events;
 
-import mactavish.myFirstPlugin.utils.Team;
-import mactavish.myFirstPlugin.utils.TeamsManager;
+import mactavish.firstplugin.utils.Team;
+import mactavish.firstplugin.utils.TeamsManager;
 import org.bukkit.entity.Creature;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
