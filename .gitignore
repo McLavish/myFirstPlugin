@@ -85,3 +85,8 @@ nb-configuration.xml
 .idea/checkstyleidea.tmp/
 src/test/
 /.idea/
+
+##############################
+## MyIgnores
+##############################
+*.bat

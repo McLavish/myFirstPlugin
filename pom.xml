@@ -6,7 +6,7 @@
 
     <groupId>me.mactavish</groupId>
     <artifactId>myFirstPlugin</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <repositories>
         <!-- This adds the Spigot Maven repository to the build -->
@@ -50,10 +50,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.14</source>
-                    <target>1.14</target>
-                </configuration>
+                <version>3.8.1</version>
             </plugin>
         </plugins>
         <resources>

@@ -1,0 +1,27 @@
+########JAVA########
+
+How to install OpenJDK:
+https://stackoverflow.com/questions/52511778/how-to-install-openjdk-11-on-windows
+
+Tuntime complexity of Java Collections:
+https://gist.github.com/psayre23/c30a821239f4818b0709
+
+########SPIGOT########
+
+Unit testing in Spigot:
+https://bukkit.org/threads/how-to-unit-test-your-plugin-with-example-project.23569/
+
+Custom entities in Spigot:
+https://www.spigotmc.org/threads/tutorial-creating-custom-entities-with-pathfindergoals.18519/
+
+Teams system example in Spigot:
+https://bukkit.org/threads/team-systems.411790/
+
+Spigot docs:
+https://hub.spigotmc.org/javadocs/spigot/index.html
+
+Spigot scheduler programming:
+https://bukkit.gamepedia.com/Scheduler_Programming
+
+########OTHER########
+
