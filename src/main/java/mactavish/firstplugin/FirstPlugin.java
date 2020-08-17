@@ -8,8 +8,7 @@ import mactavish.firstplugin.events.PlayerInteract;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class FirstPlugin extends JavaPlugin {
-
-
+  //Removed stupid .idea folder
   @Override
   public void onEnable() {
     this.getCommand("myteams").setExecutor(new CommandItem());
