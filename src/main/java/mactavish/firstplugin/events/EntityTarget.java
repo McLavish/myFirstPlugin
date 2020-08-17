@@ -10,21 +10,19 @@ import org.bukkit.event.entity.EntityTargetEvent;
 
 public class EntityTarget implements Listener {
 
-    TeamsManager teamsManager = TeamsManager.getInstance();
+  TeamsManager teamsManager = TeamsManager.getInstance();
 
-    @EventHandler
-    public void onEntityTargetEvent(EntityTargetEvent event){
+  @EventHandler
+  public void onEntityTargetEvent(EntityTargetEvent event) {
 
-        if (event.getTarget() instanceof Player && event.getEntity() instanceof Creature){
-            System.out.println("Creature is targetting player");
-            Player player = (Player) event.getTarget();
-            Creature mob = (Creature) event.getEntity();
+    if (event.getTarget() instanceof Player && event.getEntity() instanceof Creature) {
+      Player player = (Player) event.getTarget();
+      Creature mob = (Creature) event.getEntity();
 
-            Team playerTeam = teamsManager.getTeam(player);
-            if (playerTeam != null && playerTeam == teamsManager.getTeam(mob)){
-                System.out.println("Player is on the creature's team (" + playerTeam.getName() + "). Cancelling target");
-                event.setCancelled(true);
-            }
-        }
+      Team playerTeam = teamsManager.getTeam(player);
+      if (playerTeam != null && playerTeam == teamsManager.getTeam(mob)) {
+        event.setCancelled(true);
+      }
     }
+  }
 }

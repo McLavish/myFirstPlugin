@@ -8,37 +8,37 @@ import java.util.LinkedHashSet;
 
 public class Treefeller {
 
-    public final HashSet<Material> allowedTreeBlock = new HashSet<Material>() {
-        {
-            add(Material.ACACIA_LOG);
-            add(Material.BIRCH_LOG);
-            add(Material.DARK_OAK_LOG);
-            add(Material.OAK_LOG);
-            add(Material.JUNGLE_LOG);
-            add(Material.SPRUCE_LOG);
-        }
-    };
-
-    public LinkedHashSet<Block> getBlocks(Block start){
-        return getBlocks(start, new LinkedHashSet<Block>());
+  public final HashSet<Material> allowedTreeBlock = new HashSet<>() {
+    {
+      add(Material.ACACIA_LOG);
+      add(Material.BIRCH_LOG);
+      add(Material.DARK_OAK_LOG);
+      add(Material.OAK_LOG);
+      add(Material.JUNGLE_LOG);
+      add(Material.SPRUCE_LOG);
     }
+  };
 
-    public LinkedHashSet<Block> getBlocks(Block start, LinkedHashSet<Block> blocks){
-        int checkRadius = 1;
+  public LinkedHashSet<Block> getBlocks(Block start) {
+    return getBlocks(start, new LinkedHashSet<>());
+  }
 
-        for(int x = -checkRadius; x <= checkRadius; x++){
-            for(int y = -checkRadius; y <= checkRadius; y++){
-                for(int z = -checkRadius; z <= checkRadius; z++){
+  public LinkedHashSet<Block> getBlocks(Block start, LinkedHashSet<Block> blocks) {
+    int checkRadius = 1;
 
-                    Block block = start.getRelative(x, y, z);
+    for (int x = -checkRadius; x <= checkRadius; x++) {
+      for (int y = -checkRadius; y <= checkRadius; y++) {
+        for (int z = -checkRadius; z <= checkRadius; z++) {
 
-                    if (!blocks.contains(block) && allowedTreeBlock.contains(block.getType())){
-                        blocks.add(block);
-                        blocks.addAll(getBlocks(block, blocks));
-                    }
-                }
-            }
+          Block block = start.getRelative(x, y, z);
+
+          if (!blocks.contains(block) && allowedTreeBlock.contains(block.getType())) {
+            blocks.add(block);
+            blocks.addAll(getBlocks(block, blocks));
+          }
         }
-        return blocks;
+      }
     }
+    return blocks;
+  }
 }

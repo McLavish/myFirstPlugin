@@ -11,26 +11,26 @@ import java.util.List;
 
 public class EntityDeath implements Listener {
 
-    private final HashMap<Material,Material> rawToCooked = new HashMap<Material,Material>() {
-        {
-            put(Material.MUTTON,Material.COOKED_MUTTON);
-            put(Material.BEEF,Material.COOKED_BEEF);
-            put(Material.CHICKEN,Material.COOKED_CHICKEN);
-            put(Material.PORKCHOP,Material.COOKED_PORKCHOP);
-            put(Material.RABBIT,Material.COOKED_RABBIT);
-        }
-    };
-
-    @EventHandler
-    public void onEntityDeath(EntityDeathEvent event){
-        List<ItemStack> drops = event.getDrops();
-        drops.replaceAll(itemStack -> {
-            Material dropType = itemStack.getType();
-
-            return rawToCooked.containsKey(dropType)
-                    ? new ItemStack(rawToCooked.get(dropType), itemStack.getAmount())
-                    : itemStack;
-        });
-        System.out.println("The mob dropped: " + drops);
+  private final HashMap<Material, Material> rawToCooked = new HashMap<>() {
+    {
+      put(Material.MUTTON, Material.COOKED_MUTTON);
+      put(Material.BEEF, Material.COOKED_BEEF);
+      put(Material.CHICKEN, Material.COOKED_CHICKEN);
+      put(Material.PORKCHOP, Material.COOKED_PORKCHOP);
+      put(Material.RABBIT, Material.COOKED_RABBIT);
     }
+  };
+
+  @EventHandler
+  public void onEntityDeath(EntityDeathEvent event) {
+    List<ItemStack> drops = event.getDrops();
+    drops.replaceAll(itemStack -> {
+      Material dropType = itemStack.getType();
+
+      return rawToCooked.containsKey(dropType)
+              ? new ItemStack(rawToCooked.get(dropType), itemStack.getAmount())
+              : itemStack;
+    });
+    System.out.println("The mob dropped: " + drops);
+  }
 }
